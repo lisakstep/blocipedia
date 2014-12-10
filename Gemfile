@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 # Customized gems
+
+## Testing
+## Faker gem for fake user data etc in development
+gem 'faker'
+
+
+
+
+## Development and Production
 ## Use sqlite3 as the database for Active Record
  group :production do
    gem 'pg'
@@ -22,6 +31,9 @@ source 'https://rubygems.org'
 
  ## Figaro handles sensitive data with environment vars
  gem 'figaro', '1.0'
+
+
+
 
 # Boilerplate gems
 ## Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

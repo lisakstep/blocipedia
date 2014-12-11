@@ -29,3 +29,20 @@ normal_user.save!
 
 puts "You have generated #{User.count} users."
 users = User.all
+
+# Create wikis
+23.times do
+  wiki = Wiki.create!(
+    user: users.sample,
+    title: Faker::Lorem.sentence,
+    body: Faker::Lorem.paragraph    
+    )
+end
+puts "You have generated #{Wiki.count} wikis."
+wikis = Wiki.all
+  
+  
+  
+  
+  
+  

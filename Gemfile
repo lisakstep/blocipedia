@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-# Customized gems
+
+ruby '2.1.1'
 
 ## Testing
 ## Faker gem for fake user data etc in development

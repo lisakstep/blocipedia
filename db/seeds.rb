@@ -31,7 +31,7 @@ puts "You have generated #{User.count} users."
 users = User.all
 
 # Create wikis
-23.times do
+13.times do
   wiki = Wiki.create!(
     user: users.sample,
     title: Faker::Lorem.sentence,

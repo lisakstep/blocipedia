@@ -14,18 +14,29 @@ end
 admin = User.new(
   name: 'Admin User',
   email: 'admin@example.com',
-  password: 'helloworld'
+  password: 'helloworld',
+  role: 'admin'
   )
 admin.skip_confirmation!
 admin.save!
 
-normal_user = User.new(
-  name: 'Normal User',
-  email: 'normal.user@example.com',
-  password: 'helloworld'
+standard_user = User.new(
+  name: 'Standard Member',
+  email: 'standard.member@example.com',
+  password: 'helloworld',
+  role: 'standard_member'
   )
-normal_user.skip_confirmation!
-normal_user.save!
+standard_user.skip_confirmation!
+standard_user.save!
+
+paid_user = User.new(
+  name: 'Paid Member',
+  email: 'paid.member@example.com',
+  password: 'helloworld',
+  role: 'paid_member'
+  )
+paid_user.skip_confirmation!
+paid_user.save!
 
 puts "You have generated #{User.count} users."
 users = User.all

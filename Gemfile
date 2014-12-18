@@ -33,6 +33,9 @@ gem 'faker'
  ## Figaro handles sensitive data with environment vars
  gem 'figaro', '1.0'
 
+ ## Use pundit for user authorization control
+ gem 'pundit'
+
 
 
 

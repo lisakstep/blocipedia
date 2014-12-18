@@ -1,4 +1,7 @@
 <h1>All Wikis</h1>
+<% if policy(Wiki.new).create? %>
+  <%= link_to "New wiki", new_wiki_path, class: 'btn btn-success' %>
+<% end %>
 <% @wikis.each do |wiki| %>
   <div class="media">
     <div class="media-body">
@@ -6,9 +9,8 @@
         <%= link_to wiki.title, wiki %>
       </h4>
        <small>
-         last updated <%= time_ago_in_words(wiki.updated_at) %> ago by <%= wiki.user %><br/>
+         last updated <%= time_ago_in_words(wiki.updated_at) %> ago by <%= wiki.user.name %><br/>
        </small>
     </div>
   </div>
 <% end %>
-<%= link_to "New wiki", new_wiki_path, class: 'btn btn-success' %>
